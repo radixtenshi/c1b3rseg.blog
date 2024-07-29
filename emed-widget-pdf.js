@@ -27,7 +27,7 @@
 
         iframe.setAttribute("width", "100%");
         iframe.setAttribute("height", "100%");
-        iframe.setAttribute("style", "width: 100%; height: 100%; background: rgba(0,34,102,1); color: white;");
+        iframe.setAttribute("style", "width: 100%; height: 100%; background: rgba(0,34,102,0); color: white;");
         iframe.setAttribute("frameborder", "0");
         iframe.setAttribute("allow", "fullscreen");
 
