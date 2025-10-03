@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; DESACTIVA EL MEZCLADOR CLÁSICO (COMPORTAMIENTO POR DEFECTO DE WINDOWS 10/11)
+; Restaura la interfaz moderna de control de volumen
+; Diseño más limpio pero menos control granular por aplicación
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio]
+; Elimina la entrada personalizada para restaurar valor por defecto
+; Windows usará la interfaz moderna de control de volumen
+"UseLegacyVolumeControl"=-

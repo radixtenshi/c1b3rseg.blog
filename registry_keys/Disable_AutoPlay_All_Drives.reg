@@ -1,0 +1,13 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; DESACTIVA AUTOPLAY PARA TODOS LOS TIPOS DE UNIDADES Y MEDIOS EXTRAÍBLES
+; Previene la ejecución automática de contenido al insertar dispositivos
+; Mayor seguridad contra malware de unidades USB y medios extraíbles
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer]
+; Valor FF: Desactiva AutoPlay para todos los tipos de unidad (hex FF = decimal 255)
+; Valor 91: Desactiva para unidades extraíbles (valor por defecto en algunas versiones)
+; Valor 95: Configuración por defecto típica de Windows
+"NoDriveTypeAutoRun"=dword:000000ff

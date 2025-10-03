@@ -1,0 +1,14 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; RESTABLECE COMPORTAMIENTO POR DEFECTO AL CERRAR LA TAPA
+; Windows gestionará automáticamente las acciones al cerrar la tapa
+; según el plan de energía activo y configuración del sistema
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power]
+; Elimina las entradas personalizadas para restaurar configuración por defecto
+; Windows usará los valores del plan de energía activo
+"LidCloseAction"=-
+"LidCloseActionAC"=-
+"LidCloseActionDC"=-

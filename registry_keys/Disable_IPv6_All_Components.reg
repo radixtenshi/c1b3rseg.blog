@@ -1,0 +1,14 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; DESACTIVA TODOS LOS COMPONENTES IPv6 PARA MEJORAR RENDIMIENTO DE RED
+; Elimina protocolo IPv6 y fuerza uso exclusivo de IPv4
+; ⚠️ ADVERTENCIA: Puede causar problemas de conectividad en redes modernas
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\TCPIP6\Parameters]
+; Valor FF: Desactiva TODOS los componentes IPv6 (hex FF = decimal 255)
+; Valor 00: IPv6 completamente activado (valor por defecto)
+; Valor 0x20: Desactiva IPv6 no loopback
+; Valor 0x10: Preferencia IPv4 sobre IPv6
+"DisabledComponents"=dword:000000ff

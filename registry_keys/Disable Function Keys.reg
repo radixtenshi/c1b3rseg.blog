@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+; Desactiva teclas rápidas (F1-F12, teclas numéricas y combinaciones de Windows)
+; ADVERTENCIA: Esto limita severamente la funcionalidad del sistema
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"DisabledHotkeys"=hex(2):30,00,78,00,31,00,31,00,31,00,32,00,33,00,34,00,35,00,\
+  36,00,37,00,38,00,39,00,30,00,00,00

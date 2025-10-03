@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+; Desactiva el seguimiento de aplicaciones frecuentes - Mejora privacidad
+[HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\EdgeUI]
+; Desactiva el rastreo de aplicaciones más usadas (MFU)
+; 1 = Desactivado, 0 = Activado (valor por defecto)
+"DisableMFUTracking"=dword:00000001

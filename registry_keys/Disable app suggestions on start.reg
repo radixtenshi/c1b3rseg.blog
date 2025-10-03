@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+; Desactiva sugerencias de apps y características de consumo
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\CloudContent]
+; Desactiva sugerencias, promociones y contenido de consumo
+; 1 = Desactivado (modo profesional), 0 = Activado (valor por defecto)
+"DisableWindowsConsumerFeatures"=dword:00000001

@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; DESACTIVA LA DESCARGA AUTOMÁTICA DE DLLs (COMPORTAMIENTO POR DEFECTO)
+; Mantiene DLLs en memoria cache para更快 reutilización
+; Mejor rendimiento de aplicaciones pero mayor uso de memoria RAM
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer]
+; Elimina la entrada personalizada para restaurar valor por defecto
+; Windows mantendrá DLLs en memoria para mejor rendimiento
+"AlwaysUnloadDLL"=-

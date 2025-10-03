@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; RESTABLECE COMPORTAMIENTO POR DEFECTO - UNA SESIÓN POR USUARIO
+; Limita cada usuario a una única sesión RDP activa (seguridad estándar)
+; Previene conexiones múltiples no autorizadas con la misma cuenta
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server]
+; Elimina la entrada personalizada para restaurar valor por defecto
+; Windows limitará automáticamente a una sesión RDP por usuario
+"fSingleSessionPerUser"=-

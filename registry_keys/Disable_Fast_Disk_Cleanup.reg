@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; RESTABLECE LA CONFIGURACIÓN POR DEFECTO DE LIMPIEZA DE ARCHIVOS TEMPORALES
+; Revierte al procesamiento normal del Liberador de Espacio de Windows
+; Mantiene el balance entre velocidad y exhaustividad en la limpieza
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches\Temporary Files]
+; Elimina la entrada personalizada para restaurar el valor por defecto
+; que generalmente es 1 (procesamiento normal y exhaustivo)
+"StateFlags"=-

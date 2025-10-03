@@ -1,0 +1,5 @@
+Windows Registry Editor Version 5.00
+
+; Revierte a configuración por defecto de Windows
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerThrottling]
+"PowerThrottlingOff"=dword:00000000

@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+; Restaura valores por defecto de TCP/IP
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters]
+"TcpWindowSize"=-
+"Tcp1323Opts"=-
+"DefaultTTL"=-

@@ -1,0 +1,8 @@
+Windows Registry Editor Version 5.00
+
+; Valores por defecto de Windows (iconos se ocultan automáticamente)
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer]
+"EnableAutoTray"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer]
+"NoAutoTrayNotify"=-

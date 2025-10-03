@@ -1,0 +1,9 @@
+Windows Registry Editor Version 5.00
+
+; Desactiva completamente la telemetría de Windows
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DataCollection]
+"AllowTelemetry"=dword:00000000
+
+; Desactivar más componentes de tracking
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\AppCompat]
+"AITEnable"=dword:00000000

@@ -1,0 +1,18 @@
+Windows Registry Editor Version 5.00
+
+; Valores por defecto de Windows para búsqueda y Cortana
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Search]
+; Reactiva el historial de dispositivos (1 = Activado - Valor por defecto)
+"DeviceHistoryEnabled"=dword:00000001
+
+; Reactiva la vista de historial de búsquedas (1 = Activado - Valor por defecto)
+"HistoryViewEnabled"=dword:00000001
+
+; Permite que la búsqueda use tu ubicación (1 = Permitido - Valor por defecto)
+"AllowSearchToUseLocation"=dword:00000001
+
+; Reactiva las búsquedas de Bing (1 = Activado - Valor por defecto)
+"BingSearchEnabled"=dword:00000001
+
+; Restaura el consentimiento para Cortana (1 = Consentido - Valor por defecto)
+"CortanaConsent"=dword:00000001

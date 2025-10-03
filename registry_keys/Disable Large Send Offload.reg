@@ -1,0 +1,13 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; RESTABLECE CONFIGURACIÓN POR DEFECTO DE RED DE WINDOWS
+; Desactiva las optimizaciones de hardware para compatibilidad máxima
+; Útil si experimentas problemas de estabilidad o conectividad
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters]
+; Revierte a procesamiento de red por software (compatible universalmente)
+"EnableTCPChimney"=-
+"EnableTCPA"=-
+"EnableRSS"=-

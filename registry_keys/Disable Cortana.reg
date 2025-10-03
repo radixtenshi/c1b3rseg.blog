@@ -1,0 +1,15 @@
+Windows Registry Editor Version 5.00
+
+; Desactiva Cortana y búsquedas web - Modo offline completo
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Windows Search]
+; Desactiva completamente el asistente Cortana (0 = Desactivado, 1 = Activado)
+"AllowCortana"=dword:00000000
+
+; Desactiva búsquedas web desde la búsqueda de Windows (1 = Desactivado, 0 = Activado)
+"DisableWebSearch"=dword:00000001
+
+; Desactiva la búsqueda conectada a servicios web (0 = Solo búsqueda local)
+"ConnectedSearchUseWeb"=dword:00000000
+
+; Bloquea búsquedas web en conexiones con límite de datos (0 = Bloqueado)
+"ConnectedSearchUseWebOverMeteredConnections"=dword:00000000

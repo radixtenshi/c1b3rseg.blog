@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; RESTABLECE LA APLICACIÓN CONFIGURACIÓN MODERNA POR DEFECTO
+; Revierte a la interfaz moderna de Windows 10/11 para ajustes del sistema
+; Mantiene la experiencia de usuario consistente con las versiones actuales
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer]
+; Elimina la entrada personalizada para restaurar el comportamiento por defecto
+; Windows usará la app Configuración moderna en lugar del Panel de Control clásico
+"ForceClassicControlPanel"=-

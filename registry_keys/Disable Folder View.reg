@@ -1,0 +1,6 @@
+Windows Registry Editor Version 5.00
+
+; Elimina personalizaciones de vistas de carpetas
+; Todas las carpetas usarán vista por defecto "General Items"
+[HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\Bags\AllFolders\Shell]
+"FolderType"="NotSpecified"

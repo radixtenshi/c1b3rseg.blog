@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; RESTABLECE LA CONFIGURACIÓN POR DEFECTO DE WINDOWS PARA MULTIMEDIA
+; Balance óptimo entre rendimiento multimedia y recursos generales del sistema
+; Configuración recomendada para la mayoría de usuarios y usos cotidianos
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile]
+; Elimina la entrada personalizada para que Windows use su valor por defecto
+; que generalmente es 20 (balance entre rendimiento multimedia y sistema general)
+"SystemResponsiveness"=-

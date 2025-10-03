@@ -1,0 +1,21 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; DESACTIVA EL REQUERIMIENTO DE CTRL+ALT+DEL (COMPORTAMIENTO POR DEFECTO)
+; Restaura el logon estándar sin requerir la combinación de teclas
+; Menor seguridad pero mayor conveniencia para el usuario
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon]
+; Elimina la entrada personalizada para restaurar valor por defecto
+; Windows no requerirá Ctrl+Alt+Del en la pantalla de inicio de sesión
+"DisableCAD"=-
+
+; Para estaciones de trabajo en dominio
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
+"disablecad"=-
+
+; Combinar con otras medidas de seguridad
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
+"LegalNoticeCaption"=-
+"LegalNoticeText"=-

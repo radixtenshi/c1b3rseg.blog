@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; DESACTIVA EL INICIO AUTOMÁTICO DE MICROSOFT EDGE AL INICIAR WINDOWS
+; Previene que Edge se ejecute automáticamente en segundo plano al iniciar el sistema
+; Reduce consumo de recursos pero puede afectar algunas integraciones del sistema
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\MicrosoftEdge\Main]
+; Valor 1: Previene la página de primera ejecución y inicio automático
+; Valor 0: Permite comportamiento normal (valor por defecto)
+"PreventFirstRunPage"=dword:00000001

@@ -1,0 +1,20 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; DESACTIVA LA PRECARGA DE MICROSOFT EDGE EN SEGUNDO PLANO
+; Evita que Edge se cargue automáticamente al iniciar Windows
+; Reduce consumo de RAM y CPU pero incrementa tiempo de apertura del navegador
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\MicrosoftEdge\Main]
+; Valor 0: Desactiva la precarga y prelanzamiento de Edge
+; Valor 1: Permite precarga (valor por defecto - mejor experiencia de usuario)
+"AllowPrelaunch"=dword:00000000
+
+; Desactivar también el preloading en Current User
+[HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\MicrosoftEdge\Main]
+"AllowPrelaunch"=dword:00000000
+
+; Desactivar preloading para todas las cuentas
+[HKEY_USERS\.DEFAULT\SOFTWARE\Policies\Microsoft\MicrosoftEdge\Main]
+"AllowPrelaunch"=dword:00000000

@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; DESACTIVA LA PANTALLA DE BLOQUEO DE WINDOWS 10/11
+; Elimina la pantalla de bloqueo con imagen y va directo al login
+; Ahorra tiempo al iniciar/reanudar pero reduce seguridad visual
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Personalization]
+; Valor 1: Desactiva la pantalla de bloqueo (va directo al login)
+; Valor 0: Mantiene pantalla de bloqueo activa (valor por defecto)
+"NoLockScreen"=dword:00000001

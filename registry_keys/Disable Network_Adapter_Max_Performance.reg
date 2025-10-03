@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; RESTABLECE LA CONFIGURACIÓN POR DEFECTO DEL ADAPTADOR DE RED
+; Reactiva las funciones de ahorro de energía que Windows gestiona automáticamente
+; para equilibrar rendimiento y consumo eléctrico.
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001]
+; Elimina la entrada personalizada para que Windows use su configuración por defecto
+; que generalmente es 24 (balance entre rendimiento y ahorro energético)
+"PnPCapabilities"=-

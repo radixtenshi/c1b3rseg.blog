@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; RESTABLECE EL COMPORTAMIENTO POR DEFECTO DE NTFS
+; Reactiva la actualización de la fecha de último acceso para mantener
+; la información completa de metadatos de los archivos.
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem]
+; Elimina la entrada personalizada para que Windows use su configuración por defecto
+; que actualiza la fecha de último acceso en todas las operaciones de lectura
+"NtfsDisableLastAccessUpdate"=-

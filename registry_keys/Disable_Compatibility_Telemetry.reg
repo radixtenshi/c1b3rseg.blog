@@ -1,0 +1,14 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; DESACTIVA LA TELEMETRÍA DE COMPATIBILIDAD Y RECOLECCIÓN DE DATOS DE WINDOWS
+; Impide que Windows envíe datos de diagnóstico y uso a Microsoft
+; ⚠️ ADVERTENCIA: Mejora la privacidad pero puede afectar algunas funcionalidades
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DataCollection]
+; Valor 0: Desactiva toda la telemetría (nivel Security)
+; Valor 1: Telemetría básica (nivel Basic)
+; Valor 2: Telemetría mejorada (nivel Enhanced)
+; Valor 3: Telemetría completa (nivel Full - valor por defecto)
+"AllowTelemetry"=dword:00000000

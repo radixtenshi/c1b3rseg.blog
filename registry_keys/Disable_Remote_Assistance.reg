@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; DESACTIVA COMPLETAMENTE LA ASISTENCIA REMOTA DE WINDOWS
+; Impide que otros usuarios puedan conectarse remotamente al equipo
+; Aumenta la seguridad al eliminar un vector de acceso remoto
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Remote Assistance]
+; Valor 0: Desactiva completamente la Asistencia Remota
+; Valor 1: Habilita la Asistencia Remota (valor por defecto)
+"fAllowToGetHelp"=dword:00000000

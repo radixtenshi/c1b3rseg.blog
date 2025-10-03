@@ -1,0 +1,13 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; DESACTIVA LA ORGANIZACIÓN AUTOMÁTICA EN TODAS LAS CARPETAS
+; Permite organizar manualmente iconos y mantener la disposición personalizada
+; Windows no reordenará automáticamente los archivos y carpetas
+; =============================================================================
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\Shell\Bags\AllFolders\Shell]
+; Valor "NotSpecified": Desactiva la organización automática y recuerda posiciones
+; Valores alternativos: "Documents", "Pictures", "Music", "Videos" (organización por tipo)
+; Valor por defecto: Varía según tipo de carpeta (organización automática activa)
+"FolderType"="NotSpecified"
