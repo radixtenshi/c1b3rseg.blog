@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; DESACTIVA EL SEGUIMIENTO DE ACTIVIDADES DEL USUARIO EN WINDOWS
+; Impide que el sistema monitoree y registre comportamientos del usuario
+; Mayor privacidad pero pérdida de personalización y sugerencias
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer]
+; Valor 1: Desactiva el seguimiento y telemetría de actividades del usuario
+; Valor 0: Permite el seguimiento (valor por defecto - para personalización)
+"NoInstrumentation"=dword:00000001

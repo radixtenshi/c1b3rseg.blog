@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+; Reactiva características de consumo - Valor por defecto de Windows
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\CloudContent]
+; Reactiva sugerencias, promociones y contenido personalizado
+; 0 = Activado (comportamiento normal de Windows)
+"DisableWindowsConsumerFeatures"=dword:00000000

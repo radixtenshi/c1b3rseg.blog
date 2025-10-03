@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; ACTIVA LOS AVISOS UAC PARA ADMINISTRADORES (COMPORTAMIENTO POR DEFECTO)
+; Restaura la verificación de seguridad al ejecutar programas como administrador
+; Mayor protección contra malware y ejecución no autorizada
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
+; Elimina la entrada personalizada para restaurar valor por defecto
+; Windows pedirá consentimiento para operaciones que requieran elevación
+"ConsentPromptBehaviorAdmin"=-

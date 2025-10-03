@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; HABILITA SESIONES RDP SIMULTÁNEAS PARA EL MISMO USUARIO
+; Permite que un usuario inicie múltiples sesiones remotas concurrentes
+; Útil para administradores y escenarios de múltiples conexiones
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server]
+; Valor 0: Permite múltiples sesiones RDP por usuario (concurrentes)
+; Valor 1: Limita a una sola sesión por usuario (valor por defecto)
+"fSingleSessionPerUser"=dword:00000000

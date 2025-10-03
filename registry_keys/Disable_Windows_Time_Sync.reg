@@ -1,0 +1,13 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; DESACTIVA EL SERVICIO DE SINCRONIZACIÓN DE TIEMPO DE WINDOWS (W32Time)
+; Impide que Windows sincronice la hora automáticamente con servidores NTP
+; Útil para entornos aislados pero puede causar deriva del reloj del sistema
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time]
+; Valor 4: Servicio desactivado (no se inicia automáticamente)
+; Valor 2: Servicio automático (valor por defecto - se inicia con Windows)
+; Valor 3: Servicio manual (se inicia cuando se solicita)
+"Start"=dword:00000004

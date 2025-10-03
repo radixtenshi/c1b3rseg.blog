@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; DESACTIVA LAS ACTUALIZACIONES AUTOMÁTICAS DE WINDOWS
+; ⚠️ ADVERTENCIA: Desprotege el sistema al evitar parches de seguridad críticos
+; Solo usar temporalmente y con otra solución de seguridad alternativa
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU]
+; Valor 1: Desactiva todas las actualizaciones automáticas
+; Valor 0: Permite actualizaciones automáticas (valor por defecto y seguro)
+"NoAutoUpdate"=dword:00000001

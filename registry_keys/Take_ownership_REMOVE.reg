@@ -1,0 +1,6 @@
+Windows Registry Editor Version 5.00
+
+; Elimina completamente la opción "Take Ownership" del menú contextual
+[-HKEY_CLASSES_ROOT\*\shell\TakeOwnership]
+[-HKEY_CLASSES_ROOT\Directory\shell\TakeOwnership]
+[-HKEY_CLASSES_ROOT\Drive\shell\runas]

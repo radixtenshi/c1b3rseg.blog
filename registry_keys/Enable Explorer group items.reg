@@ -1,0 +1,9 @@
+Windows Registry Editor Version 5.00
+
+; Reactiva la agrupación de elementos - Comportamiento por defecto
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"GroupByType"=-
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer]
+"NoGroupView"=-
+[HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\Bags\AllFolders\Shell]
+"GroupView"=-

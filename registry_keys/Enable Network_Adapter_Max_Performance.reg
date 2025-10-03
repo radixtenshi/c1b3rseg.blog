@@ -1,0 +1,13 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; DESACTIVA LAS FUNCIONES DE AHORRO DE ENERGÍA EN EL ADAPTADOR DE RED
+; Esto permite que la tarjeta de red opere siempre a máximo rendimiento
+; pero aumenta el consumo eléctrico. Ideal para equipos de escritorio.
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001]
+; Valor 0: Desactiva todas las capacidades de ahorro de energía (máximo rendimiento)
+; Valor 24: Permite suspensión parcial (balanceado - valor por defecto)
+; Valor 256: Máximo ahorro energético (mínimo rendimiento)
+"PnPCapabilities"=dword:00000000

@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; ACTIVA EL SERVICIO DE SINCRONIZACIÓN DE TIEMPO (COMPORTAMIENTO POR DEFECTO)
+; Restaura la sincronización automática con servidores de tiempo de Microsoft
+; Mantiene la hora exacta y consistente en el sistema y red local
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time]
+; Elimina la entrada personalizada para restaurar valor por defecto
+; Windows sincronizará automáticamente la hora con servidores NTP
+"Start"=-

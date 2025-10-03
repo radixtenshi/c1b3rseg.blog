@@ -1,0 +1,20 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; ACTIVA LA PRECARGA DE EDGE (COMPORTAMIENTO POR DEFECTO)
+; Permite que Edge se precargue para un inicio más rápido
+; Mejora la experiencia de usuario pero consume recursos en segundo plano
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\MicrosoftEdge\Main]
+; Elimina la entrada personalizada para restaurar valor por defecto
+; Edge se precargará automáticamente para inicio más rápido
+"AllowPrelaunch"=-
+
+; Desactivar también el preloading en Current User
+[HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\MicrosoftEdge\Main]
+"AllowPrelaunch"=-
+
+; Desactivar preloading para todas las cuentas
+[HKEY_USERS\.DEFAULT\SOFTWARE\Policies\Microsoft\MicrosoftEdge\Main]
+"AllowPrelaunch"=-

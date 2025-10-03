@@ -1,0 +1,16 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; DESACTIVA LOS AVISOS UAC PARA CUENTAS DE ADMINISTRADOR
+; Los administradores no verán prompts de UAC al ejecutar programas
+; ⚠️ ADVERTENCIA: Reduce la seguridad al eliminar la verificación de elevación
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
+; Valor 0: Nunca pedir consentimiento (ejecutar sin prompts UAC)
+; Valor 1: Pedir credenciales en el escritorio seguro (recomendado)
+; Valor 2: Pedir consentimiento (valor por defecto - más seguro)
+; Valor 3: Pedir credenciales
+; Valor 4: Pedir consentimiento para apps no-Windows
+; Valor 5: Pedir credenciales para apps no-Windows
+"ConsentPromptBehaviorAdmin"=dword:00000000

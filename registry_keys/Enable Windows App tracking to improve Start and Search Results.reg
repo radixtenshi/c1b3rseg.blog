@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+; Reactiva el seguimiento de aplicaciones frecuentes - Valor por defecto
+[HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\EdgeUI]
+; Reactiva el rastreo de aplicaciones más usadas (MFU)
+; 0 = Activado (comportamiento por defecto de Windows)
+"DisableMFUTracking"=dword:00000000

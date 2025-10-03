@@ -1,0 +1,13 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; MAXIMIZA LA CAPACIDAD DE RESPUESTA DEL SISTEMA PARA PROCESOS MULTIMEDIA
+; Prioriza los procesos de audio y video para reducir latencia y glitches
+; Ideal para producción de audio, videojuegos y aplicaciones multimedia en tiempo real
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile]
+; Valor 0: Máxima prioridad para procesos multimedia (minima latencia)
+; Valor 10-100: Balance entre rendimiento multimedia y recursos del sistema
+; Valor por defecto: 20 (Windows 10/11) - Balanceado
+"SystemResponsiveness"=dword:00000000

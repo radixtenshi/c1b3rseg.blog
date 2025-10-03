@@ -1,0 +1,21 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; ACTIVA EL FILTRO SMARTSCREEN (COMPORTAMIENTO POR DEFECTO)
+; Restaura la protección contra malware y phishing
+; Verifica reputación de aplicaciones y descargas antes de ejecutarlas
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\System]
+; Elimina las entradas personalizadas para restaurar valores por defecto
+; Windows usará SmartScreen para protección contra threats
+"EnableSmartScreen"=-
+"ShellSmartScreenLevel"="Block"
+
+; Configuración para Microsoft Edge (navegador)
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge]
+"SmartScreenEnabled"=-
+
+; Para Windows Defender SmartScreen específicamente
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender]
+"PUAProtection"=-

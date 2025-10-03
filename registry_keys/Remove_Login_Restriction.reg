@@ -1,0 +1,14 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; ELIMINA LA RESTRICCIÓN DE ACCESO Y PERMITE TODOS LOS USUARIOS
+; Restaura el comportamiento por defecto de Windows
+; Todos los usuarios con cuenta válida podrán iniciar sesión
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon]
+; Elimina la lista de usuarios permitidos
+"AllowList"=-
+
+; Desactiva la restricción de lista blanca
+"AllowListEnabled"=-

@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; ACTIVA EL COMPORTAMIENTO POR DEFECTO DE MICROSOFT EDGE
+; Permite que Edge se ejecute automáticamente y muestre la página de primera ejecución
+; Funcionalidad completa pero mayor consumo de recursos en segundo plano
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\MicrosoftEdge\Main]
+; Elimina la entrada personalizada para restaurar valor por defecto
+; Edge se ejecutará automáticamente según la configuración del sistema
+"PreventFirstRunPage"=-

@@ -1,0 +1,9 @@
+Windows Registry Editor Version 5.00
+
+; Habilita Microsoft Store eliminando bloqueo por políticas
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsStore]
+"RemoveWindowsStore"=dword:00000000
+
+; Limpieza de posible bloqueo alternativo
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer]
+"NoUseStoreOpenWith"=dword:00000000

@@ -1,0 +1,16 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; DESACTIVA TODAS LAS ACCIONES AL CERRAR LA TAPA DEL PORTÁTIL
+; El equipo no realizará ninguna acción cuando se cierre la tapa
+; Útil para usar el portátil con monitor externo con la tapa cerrada
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power]
+; Valor 0: No hacer nada al cerrar la tapa
+; Valor 1: Suspender
+; Valor 2: Hibernar
+; Valor 3: Apagar
+"LidCloseAction"=dword:00000000        ; Configuración global
+"LidCloseActionAC"=dword:00000000      ; Conectado a corriente (AC)
+"LidCloseActionDC"=dword:00000000      ; Con batería (DC)

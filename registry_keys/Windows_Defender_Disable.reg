@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; DESACTIVA WINDOWS DEFENDER COMPLETAMENTE
+; Elimina la protección antivirus y antispyware integrada de Windows.
+; ⚠️ ADVERTENCIA: Deja el sistema vulnerable sin protección contra malware.
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender]
+; Valor 1: Desactiva permanentemente Windows Defender
+; Valor 0: Mantiene Windows Defender activo (valor por defecto y recomendado)
+"DisableAntiSpyware"=dword:00000001

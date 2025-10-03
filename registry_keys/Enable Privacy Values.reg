@@ -1,0 +1,18 @@
+Windows Registry Editor Version 5.00
+
+; Configuración de máxima privacidad para búsqueda y Cortana
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Search]
+; Desactiva el historial de dispositivos (0 = Desactivado, 1 = Activado)
+"DeviceHistoryEnabled"=dword:00000000
+
+; Desactiva la vista de historial de búsquedas (0 = Desactivado, 1 = Activado)
+"HistoryViewEnabled"=dword:00000000
+
+; Impide que la búsqueda use tu ubicación (0 = Bloqueado, 1 = Permitido)
+"AllowSearchToUseLocation"=dword:00000000
+
+; Desactiva las búsquedas de Bing (0 = Desactivado, 1 = Activado)
+"BingSearchEnabled"=dword:00000000
+
+; Revoca el consentimiento para usar Cortana (0 = Sin consentimiento, 1 = Consentido)
+"CortanaConsent"=dword:00000000

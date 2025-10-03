@@ -1,0 +1,26 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; RESTRINGE EL ACCESO AL EQUIPO A UN ÚNICO USUARIO ESPECÍFICO
+; Solo el usuario especificado podrá iniciar sesión (local y remotamente)
+; 1 - Reemplazar "UsuarioObjetivo" con el nombre del usuario permitido
+; 2 - Múltiples usuarios: Separar con comas: "Usuario1,Usuario2,Usuario3"
+; 3 - Usar nombres exactos de cuentas de Windows (respetar mayúsculas)
+; 4 - El valor hexadecimal representa el texto en formato Unicode:
+; 55,00,73,00... = "U,s,u,a,r,i,o,O,b,j,e,t,i,v,o" en Unicode
+; 5 - Administradores locales siempre tienen acceso (medida de seguridad)
+; 6 - Usuario actual debe estar en la lista para no bloquearse
+; 7 - Cuentas de servicio pueden verse afectadas
+; 8 - Se pueden agregar grupos de usuarios
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon]
+; Lista de usuarios permitidos para iniciar sesión (separados por comas)
+; Solo los usuarios listados aquí podrán acceder al sistema
+"AllowList"=hex(7):55,00,73,00,75,00,61,00,72,00,69,00,6f,00,4f,00,62,00,6a,\
+00,65,00,74,00,69,00,76,00,6f,00,00,00,00,00
+
+; Habilita la restricción de usuarios permitidos
+; Valor 1: Activa la lista blanca de usuarios
+; Valor 0: Desactiva la restricción (valor por defecto)
+"AllowListEnabled"=dword:00000001

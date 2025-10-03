@@ -1,0 +1,18 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; DESACTIVA EL ACCESO RÁPIDO DE TECLAS PERSISTENTES (STICKY KEYS)
+; Impide que se activen las Teclas Persistentes al presionar SHIFT 5 veces
+; Elimina la ventana emergente pero mantiene la funcionalidad si se activa manualmente
+; =============================================================================
+
+[HKEY_CURRENT_USER\Control Panel\Accessibility]
+; Valor "506": Desactiva el shortcut pero mantiene la funcionalidad disponible
+; Valor "506" = Desactiva shortcut + sonido + indicador visual
+; Valor "50" = Desactiva solo el shortcut (valor común)
+; Valor "0" = Todo activado (valor por defecto)
+"Flags"="0"
+
+; También desactivar FilterKeys (repetición rápida de teclas)
+[HKEY_CURRENT_USER\Control Panel\Accessibility\Keyboard Response]
+"Flags"="122"

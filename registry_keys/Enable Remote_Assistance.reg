@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; HABILITA LA ASISTENCIA REMOTA DE WINDOWS (VALOR POR DEFECTO)
+; Permite solicitar y recibir ayuda técnica remotamente
+; Útil para soporte técnico y asistencia a distancia
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Remote Assistance]
+; Elimina la restricción para restaurar el valor por defecto
+; Windows permitirá conexiones de Asistencia Remota según configuración
+"fAllowToGetHelp"=-

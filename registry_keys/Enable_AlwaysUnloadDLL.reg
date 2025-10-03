@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; ACTIVA LA DESCARGA AUTOMÁTICA DE DLLs DE LA MEMORIA RAM
+; Descarga DLLs no utilizadas inmediatamente después de su uso
+; Libera memoria RAM más rápido pero puede aumentar tiempos de carga
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer]
+; Valor 1: Habilita la descarga inmediata de DLLs no utilizadas
+; Valor 0: Deshabilita (valor por defecto - DLLs se mantienen en memoria cache)
+"AlwaysUnloadDLL"=dword:00000001

@@ -1,0 +1,26 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; HABILITA EL LOGON SEGURO CON CTRL+ALT+DEL EN PANTALLA DE INICIO DE SESIÓN
+; Requiere la combinación Ctrl+Alt+Del antes de ingresar credenciales
+; Mayor seguridad contra keyloggers y malware de captura de credenciales
+; =============================================================================
+; También se puede configurar por política de grupo
+; Directiva de equipo: Configuración de Windows → Configuración de seguridad → Directivas locales → Opciones de seguridad
+; "Inicio de sesión interactivo: Requerir Ctrl+Alt+Supr"
+
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon]
+; Valor 0: HABILITA Ctrl+Alt+Del (logon seguro)
+; Valor 1: Deshabilita Ctrl+Alt+Del (logon estándar - valor por defecto)
+"DisableCAD"=dword:00000000
+
+
+; Para estaciones de trabajo en dominio
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
+"disablecad"=dword:00000000
+
+; Combinar con otras medidas de seguridad
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
+"LegalNoticeCaption"="Advertencia de Seguridad"
+"LegalNoticeText"="Este sistema es de uso autorizado únicamente"

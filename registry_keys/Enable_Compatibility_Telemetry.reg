@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; ACTIVA LA TELEMETRÍA DE COMPATIBILIDAD (COMPORTAMIENTO POR DEFECTO)
+; Permite que Windows envíe datos de diagnóstico para mejorar compatibilidad
+; Microsoft recibe información sobre problemas y uso del sistema
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DataCollection]
+; Elimina la entrada personalizada para restaurar valor por defecto
+; Windows enviará datos de telemetría según la configuración del sistema
+"AllowTelemetry"=-

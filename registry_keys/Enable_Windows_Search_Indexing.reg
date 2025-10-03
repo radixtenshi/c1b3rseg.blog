@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; ACTIVA LA INDEXACIÓN DE BÚSQUEDA DE WINDOWS (VALOR POR DEFECTO)
+; Restaura el servicio de indexación para búsquedas rápidas de archivos
+; Mejora la experiencia de búsqueda pero consume más recursos
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Search]
+; Elimina la entrada personalizada para restaurar valor por defecto
+; Windows reactivará la indexación para búsquedas rápidas
+"SetupCompletedSuccessfully"=-

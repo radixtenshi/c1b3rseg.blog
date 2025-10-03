@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+; Optimiza throughput y rendimiento de red
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters]
+"TcpWindowSize"=dword:0005ae4c
+"Tcp1323Opts"=dword:00000003
+"DefaultTTL"=dword:00000040

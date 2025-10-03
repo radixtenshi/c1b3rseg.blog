@@ -1,0 +1,19 @@
+Windows Registry Editor Version 5.00
+
+; Configuración por defecto - Reactiva todas las funciones de accesos directos
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer]
+; Permite que Windows actualice la información de accesos directos (.lnk)
+; Valor 0 = Activado (comportamiento por defecto)
+"LinkResolveIgnoreLinkInfo"=dword:00000000
+
+; Activa la búsqueda automática de destinos de accesos directos rotos
+; Valor 0 = Activado (comportamiento por defecto)
+"NoResolveSearch"=dword:00000000
+
+; Activa el seguimiento y actualización de información de accesos directos
+; Valor 0 = Activado (comportamiento por defecto)
+"NoResolveTrack"=dword:00000000
+
+; Activa la búsqueda de aplicaciones en Internet en el diálogo "Abrir con"
+; Valor 0 = Activado (comportamiento por defecto)
+"NoInternetOpenWith"=dword:00000000

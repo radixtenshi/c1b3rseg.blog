@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; REACTIVA LAS ACTUALIZACIONES AUTOMÁTICAS DE WINDOWS
+; ✅ RECOMENDADO: Mantener activado para recibir parches de seguridad críticos
+; y correcciones de estabilidad del sistema operativo
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU]
+; Elimina la restricción para que Windows Update funcione normalmente
+; y mantenga el sistema actualizado con los últimos parches de seguridad
+"NoAutoUpdate"=-

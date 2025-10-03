@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; ACTIVA LA PANTALLA DE BLOQUEO (COMPORTAMIENTO POR DEFECTO)
+; Restaura la pantalla de bloqueo con imagen, fecha, hora y notificaciones
+; Mejora la estética y seguridad pero añade un paso extra al login
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Personalization]
+; Elimina la entrada personalizada para restaurar valor por defecto
+; Windows mostrará la pantalla de bloqueo antes del login
+"NoLockScreen"=-

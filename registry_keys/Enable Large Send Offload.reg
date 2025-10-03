@@ -1,0 +1,20 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; HABILITA OPTIMIZACIONES AVANZADAS DE RED PARA MEJOR RENDIMIENTO
+; Activa características de hardware para descarga de procesos de red a la NIC
+; ⚠️ Requiere tarjeta de red compatible con estas tecnologías
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters]
+; Habilita TCP Chimney Offload: Descarga procesamiento TCP al hardware de red
+; Reduce uso de CPU en transferencias de red de alto volumen
+"EnableTCPChimney"=dword:00000001
+
+; Habilita TCP Offload Advanced: Características avanzadas de descarga TCP
+; Mejora rendimiento en redes de alta velocidad (1Gbps+)
+"EnableTCPA"=dword:00000001
+
+; Habilita Receive Side Scaling: Distribuye procesamiento de recepción entre múltiples CPUs
+; Mejora rendimiento en sistemas multi-núcleo con alto tráfico de red
+"EnableRSS"=dword:00000001

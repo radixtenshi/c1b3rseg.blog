@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; ACTIVA EL MEZCLADOR DE VOLUMEN CLÁSICO DE WINDOWS 7/8 EN WINDOWS 10/11
+; Restaura la interfaz tradicional de control de volumen por aplicación
+; Mayor control sobre niveles individuales pero interfaz menos moderna
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio]
+; Valor 1: Habilita el mezclador de volumen clásico
+; Valor 0: Usa el mezclador moderno de Windows 10/11 (valor por defecto)
+"UseLegacyVolumeControl"=dword:00000001

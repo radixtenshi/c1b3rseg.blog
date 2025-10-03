@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; BLOQUEA LA RESOLUCIÓN DNS PARA DOMINIOS DE TRACKING DE MICROSOFT POR IPv6
+; Previene que Windows resuelva direcciones IPv6 para dominios de telemetría
+; Mayor privacidad pero posible afectación a algunas funciones del sistema
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters]
+; Valor 1: Bloquea la resolución IPv6 para dominios de tracking de Microsoft
+; Valor 0: Permite resolución normal (valor por defecto)
+"BlockIPv6ToTrackingDomains"=dword:00000001

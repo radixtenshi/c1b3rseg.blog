@@ -1,0 +1,8 @@
+Windows Registry Editor Version 5.00
+
+; Restaura valores por defecto del cache DNS
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters]
+"CacheHashTableBucketSize"=-
+"CacheHashTableSize"=-
+"MaxCacheEntryTtlLimit"=-
+"MaxSOACacheEntryTtlLimit"=-

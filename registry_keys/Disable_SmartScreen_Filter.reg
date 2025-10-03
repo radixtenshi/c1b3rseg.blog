@@ -1,0 +1,24 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; DESACTIVA EL FILTRO SMARTSCREEN DE WINDOWS
+; Elimina la verificación de reputación de aplicaciones y descargas
+; ⚠️ ADVERTENCIA: Reduce la protección contra malware y phishing
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\System]
+; Valor 0: Desactiva completamente SmartScreen
+; Valor 1: Habilita SmartScreen (valor por defecto - recomendado)
+"EnableSmartScreen"=dword:00000000
+
+; Desactiva también la comprobación de aplicaciones
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\System]
+"ShellSmartScreenLevel"="None"
+
+; Configuración para Microsoft Edge (navegador)
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge]
+"SmartScreenEnabled"=dword:00000000
+
+; Para Windows Defender SmartScreen específicamente
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender]
+"PUAProtection"=dword:00000000

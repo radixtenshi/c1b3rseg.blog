@@ -1,0 +1,47 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; RESTAURA LA CONFIGURACIÓN POR DEFECTO DE REDES WiFi
+; Elimina políticas que restringen la visualización de SSIDs disponibles
+; Permite ver y conectarse a todas las redes WiFi detectadas
+; =============================================================================
+
+; Eliminar política de bloqueo de redes WiFi
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Wireless]
+"AllowAutoConnectToWiFiSenseHotspots"=-
+"DisplayNetworkSelectionUI"=-
+"AllowInternetSharing"=-
+"AllowWiFi"=-
+
+; Restaurar configuración de visibilidad de redes
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WcmSvc\WiFiNetworkManager\Config]
+"HiddenNetworkScanningEnabled"=-
+"ShowAllNetworks"=-
+
+; Eliminar listas de redes permitidas/bloqueadas
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\NetworkList]
+"AllowedSSIDs"=-
+"DeniedSSIDs"=-
+
+; Restaurar configuración de perfiles de red
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList]
+"Profiles"=-
+"Signatures"=-
+
+
+; =============================================================================
+; LIMPIEZA ADICIONAL DE CONFIGURACIÓN WiFi
+; Elimina perfiles de red almacenados y configuraciones persistentes
+; =============================================================================
+
+; Eliminar perfiles de red específicos de la organización
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList\Profiles]
+@=""
+
+; Eliminar configuraciones de Group Policy relacionadas
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Wireless\GPTWirelessPolicy]
+@=""
+
+; Restaurar configuración de adaptadores WiFi
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Wlansvc\Parameters]
+"HostedNetworkSettings"=-

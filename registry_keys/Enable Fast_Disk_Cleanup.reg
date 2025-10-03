@@ -1,0 +1,13 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; ACELERA LA LIMPIEZA DE ARCHIVOS TEMPORALES EN EL LIBERADOR DE ESPACIO
+; Configura el limpiador para procesar archivos temporales más rápidamente
+; Reduce el tiempo de espera durante la limpieza de disco
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches\Temporary Files]
+; Estado 00000002: Procesamiento rápido de archivos temporales
+; Estado 00000001: Procesamiento normal (valor por defecto)
+; Estado 00000000: Desactivado (no limpia archivos temporales)
+"StateFlags"=dword:00000002

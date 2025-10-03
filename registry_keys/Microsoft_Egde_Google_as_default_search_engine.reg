@@ -1,0 +1,13 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; DEFINE EL BUSCADOR PREDETERMINADO EN EL NAVEGADOR EDGE
+; Define el buscador que utilizara el navegador edge cuando se escriba una consulta
+; en la barra de direcciones, en esete caso utilizara el buscador normal de google
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge]
+"DefaultSearchProviderEnabled"=dword:00000001
+"DefaultSearchProviderName"="Google"
+"DefaultSearchProviderSearchURL"="https://www.google.com/search?q={searchTerms}"
+"DefaultSearchProviderKeyword"="google.com"

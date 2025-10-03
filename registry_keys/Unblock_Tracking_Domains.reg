@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; DESBLOQUEA LA RESOLUCIÓN DNS PARA DOMINIOS DE TRACKING (COMPORTAMIENTO POR DEFECTO)
+; Permite la resolución normal de dominios de telemetría de Microsoft
+; Funcionalidad completa del sistema pero menor privacidad
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters]
+; Elimina la entrada personalizada para restaurar valor por defecto
+; Windows resolverá normalmente los dominios de telemetría por IPv6
+"BlockIPv6ToTrackingDomains"=-

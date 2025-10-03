@@ -1,0 +1,14 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; DEFINE EL BUSCADOR PREDETERMINADO EN EL NAVEGADOR EDGE
+; Define el buscador que utilizara el navegador edge cuando se escriba una consulta
+; en la barra de direcciones, en esete caso utilizara el buscador con IA de YOU.com
+; =============================================================================
+
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge]
+"DefaultSearchProviderEnabled"=dword:00000001
+"DefaultSearchProviderName"="you.com IA - GPT based"
+"DefaultSearchProviderSearchURL"="https://you.com/search?q={searchTerms}"
+"DefaultSearchProviderKeyword"="you.com"

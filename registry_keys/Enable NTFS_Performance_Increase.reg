@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; DESACTIVA LA ACTUALIZACIÓN DE LA FECHA DE ÚLTIMO ACCESO EN NTFS
+; Mejora el rendimiento del sistema de archivos reduciendo operaciones de escritura
+; especialmente en operaciones con muchos archivos pequeños.
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem]
+; Valor 1: Desactiva la actualización de la marca de tiempo de último acceso
+; Valor 0: Mantiene la actualización activa (valor por defecto de Windows)
+"NtfsDisableLastAccessUpdate"=dword:00000001

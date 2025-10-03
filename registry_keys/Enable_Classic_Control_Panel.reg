@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; HABILITA EL PANEL DE CONTROL CLÁSICO EN LUGAR DE CONFIGURACIÓN MODERNA
+; Muestra la vista tradicional por categorías en lugar de la app Configuración
+; Ideal para usuarios que prefieren la interfaz clásica de Windows
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer]
+; Valor 1: Fuerza la apertura del Panel de Control clásico
+; Valor 0: Usa la app Configuración moderna (valor por defecto Windows 10/11)
+"ForceClassicControlPanel"=dword:00000001

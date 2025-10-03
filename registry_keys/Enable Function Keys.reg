@@ -1,0 +1,6 @@
+Windows Registry Editor Version 5.00
+
+; Reactiva todas las teclas rápidas - Configuración por defecto de Windows
+; Elimina la entrada para restaurar funcionalidad completa
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"DisabledHotkeys"=-

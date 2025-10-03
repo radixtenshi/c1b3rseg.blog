@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; RESTABLECE EL TAMAÑO DE TRANSFERENCIA USB POR DEFECTO
+; Revierte a la configuración original de Windows para transferencias USB
+; Compatibilidad garantizada con todos los dispositivos
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\usbstor]
+; Elimina la entrada personalizada para restaurar valor por defecto
+; Windows usará el tamaño de transferencia óptimo según el dispositivo
+"MaximumTransferLength"=-

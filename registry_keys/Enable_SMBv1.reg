@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; ACTIVA EL PROTOCOLO SMBv1 (NO RECOMENDADO POR SEGURIDAD)
+; Revierte la configuración y habilita el protocolo SMBv1
+; ⚠️ EXPONE el sistema a vulnerabilidades críticas como WannaCry
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters]
+; Elimina la entrada personalizada (no necesariamente reactiva SMBv1)
+; Windows puede mantener SMBv1 desactivado por políticas de seguridad
+"SMB1"=-

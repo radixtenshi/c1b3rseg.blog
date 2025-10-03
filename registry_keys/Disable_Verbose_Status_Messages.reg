@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; DESACTIVA MENSAJES DETALLADOS - RESTABLECE MENSAJES NORMALES
+; Revierte a los mensajes genéricos estándar de Windows
+; Mensajes más simples y menos técnicos para usuarios finales
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
+; Elimina la entrada personalizada para restaurar valor por defecto
+; Windows mostrará mensajes genéricos en inicio, cierre y logon/logoff
+"VerboseStatus"=-

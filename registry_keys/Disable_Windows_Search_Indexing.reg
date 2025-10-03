@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; DESACTIVA LA INDEXACIÓN DE BÚSQUEDA DE WINDOWS
+; Detiene el servicio de indexación que consume recursos en segundo plano
+; Reduce uso de CPU y disco pero ralentiza las búsquedas de archivos
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Search]
+; Valor 0: Desactiva la indexación de búsqueda
+; Valor 1: Indexación activada (valor por defecto)
+"SetupCompletedSuccessfully"=dword:00000000

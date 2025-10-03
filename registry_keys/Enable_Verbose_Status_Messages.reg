@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; HABILITA MENSAJES DETALLADOS EN INICIO, CIERRE, LOGON Y LOGOFF
+; Muestra información específica del proceso en lugar de mensajes genéricos
+; Útil para diagnóstico de problemas y ver el progreso real del sistema
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
+; Valor 1: Habilita mensajes de estado detallados (verbose)
+; Valor 0: Mensajes normales genéricos (valor por defecto)
+"VerboseStatus"=dword:00000001

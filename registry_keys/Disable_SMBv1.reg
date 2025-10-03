@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; DESACTIVA EL PROTOCOLO SMBv1 (SERVER MESSAGE BLOCK VERSION 1)
+; Elimina un protocolo obsoleto y vulnerable de compartir archivos en red
+; ⚠️ ADVERTENCIA: Mejora la seguridad pero puede afectar dispositivos legacy
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters]
+; Valor 0: Desactiva el protocolo SMBv1 (recomendado por seguridad)
+; Valor 1: Habilita SMBv1 (valor por defecto en algunas versiones antiguas)
+"SMB1"=dword:00000000

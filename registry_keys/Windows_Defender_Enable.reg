@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; REACTIVA WINDOWS DEFENDER Y SU PROTECCIÓN INTEGRADA
+; Restaura la protección antivirus y antispyware que viene con Windows.
+; ✅ RECOMENDADO: Mantener siempre activado para protección básica del sistema.
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender]
+; Elimina la restricción para que Windows Defender funcione normalmente
+; y proporcione protección en tiempo real contra malware y spyware
+"DisableAntiSpyware"=-

@@ -1,0 +1,5 @@
+Windows Registry Editor Version 5.00
+
+; Activa Fast Startup - Arranque rápido - Activa iberfil que ocupa de 2 a 4 gb en disco pero el inicio es mas acelrado.
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Power]
+"HiberbootEnabled"=dword:00000001

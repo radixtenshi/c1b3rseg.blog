@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; ACTIVA AUTOPLAY CON CONFIGURACIÓN POR DEFECTO DE WINDOWS
+; Restaura el comportamiento automático para medios extraíbles
+; Permite ejecución automática según preferencias del usuario
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer]
+; Elimina la entrada personalizada para restaurar valor por defecto
+; Windows usará AutoPlay según configuración del usuario y tipo de medio
+"NoDriveTypeAutoRun"=-

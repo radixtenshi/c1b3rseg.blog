@@ -1,0 +1,15 @@
+Windows Registry Editor Version 5.00
+
+; Valores por defecto - Reactiva Cortana y búsquedas web
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Windows Search]
+; Reactiva el asistente Cortana (1 = Activado - Valor por defecto)
+"AllowCortana"=dword:00000001
+
+; Reactiva búsquedas web desde la búsqueda de Windows (0 = Activado - Valor por defecto)
+"DisableWebSearch"=dword:00000000
+
+; Permite búsqueda conectada a servicios web (1 = Activado - Valor por defecto)
+"ConnectedSearchUseWeb"=dword:00000001
+
+; Permite búsquedas web en conexiones con límite de datos (1 = Permitido - Valor por defecto)
+"ConnectedSearchUseWebOverMeteredConnections"=dword:00000001

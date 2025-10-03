@@ -1,0 +1,13 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; AUMENTA LA VELOCIDAD DE TRANSFERENCIA USB CON TAMAÑOS DE PAQUETE MÁS GRANDES
+; Optimiza el tamaño máximo de transferencia para dispositivos USB de almacenamiento
+; Mejora rendimiento en transferencias de archivos grandes
+; =============================================================================
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\usbstor]
+; Valor 00200000: 2,097,152 bytes (2MB) - Tamaño máximo de transferencia
+; Valor por defecto: Varía (usualmente 64KB-256KB dependiendo del sistema)
+; Valores comunes: 00010000 (64KB), 00040000 (256KB), 00100000 (1MB)
+"MaximumTransferLength"=dword:00200000
