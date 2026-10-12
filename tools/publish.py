@@ -214,7 +214,10 @@ def _parse_front_matter(text: str) -> tuple[dict, str]:
         if ":" not in line:
             continue
         k, v = line.split(":", 1)
-        meta[k.strip().lower()] = v.strip()
+        val = v.strip()
+        if len(val) >= 2 and val[0] == val[-1] and val[0] in "\"'":
+            val = val[1:-1]
+        meta[k.strip().lower()] = val
     return meta, m.group(2)
 
 

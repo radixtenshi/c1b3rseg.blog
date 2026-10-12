@@ -2,6 +2,7 @@
 tools/client_secret*.json
 tools/.blogger_token.json
 tools/.blog_config.json
+docs/00 - Credenciales.md
 
 # python
 __pycache__/

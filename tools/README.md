@@ -1,8 +1,9 @@
 # Herramienta de publicación para Blogger
 
 Publica notas del blog **c1b3rseg.blogspot.com** usando la Blogger API v3 de Google.
-Las notas se redactan en Markdown dentro de `posts/` y los adjuntos (imágenes, PDFs)
-viven en `assets/` dentro de este repo.
+Las notas se redactan en Markdown dentro de `publicaciones/`, cada una en su propia
+carpeta (`publicaciones/AAAA-MM-DD-titulo/`), y los adjuntos (imágenes, PDFs) viven
+en `assets/` dentro de este repo.
 
 ## Configuración inicial (una sola vez)
 
@@ -38,10 +39,10 @@ para siempre (renueva los tokens solo).
 
 ```bash
 # crear un borrador (lo más seguro: revisar antes de publicar)
-python tools/publish.py post posts/mi-nota.md
+python tools/publish.py post publicaciones/2026-10-12-obsidian-img/obsidian-img.md
 
 # publicar directo
-python tools/publish.py post posts/mi-nota.md --publicar
+python tools/publish.py post publicaciones/2026-10-12-obsidian-img/obsidian-img.md --publicar
 
 # listar posts con sus IDs
 python tools/publish.py list
@@ -50,13 +51,24 @@ python tools/publish.py list
 python tools/publish.py publish <post-id>
 
 # editar y republicar un post existente
-python tools/publish.py update <post-id> posts/mi-nota.md --publicar
+python tools/publish.py update <post-id> publicaciones/.../nota.md --publicar
 
 # borrar (pide confirmación)
 python tools/publish.py delete <post-id>
 ```
 
-## Formato de las notas (`posts/*.md`)
+## Estructura de las publicaciones (`publicaciones/*.md`)
+
+Cada nota vive en su propia carpeta, nombrada `AAAA-MM-DD-titulo`:
+
+```
+publicaciones/
+├── _plantilla.md
+└── 2026-10-12-obsidian-img/
+    └── obsidian-img.md
+```
+
+Formato del archivo `.md`:
 
 ```markdown
 ---
@@ -75,11 +87,11 @@ Contenido en Markdown...
 - **Importante**: subir y pushear los assets al repo *antes* de publicar,
   si no las imágenes no van a cargar.
 
-Ver `posts/_plantilla.md` como ejemplo.
+Ver `publicaciones/_plantilla.md` como ejemplo.
 
 ## Flujo de trabajo sugerido
 
-1. Redactar la nota en `posts/` (o pedírsela a OpenCode).
+1. Redactar la nota en `publicaciones/AAAA-MM-DD-titulo/` (o pedírsela a OpenCode).
 2. Subir los assets: `git add assets/... && git commit && git push`.
-3. Publicar borrador: `python tools/publish.py post posts/nota.md`.
+3. Publicar borrador: `python tools/publish.py post publicaciones/.../nota.md`.
 4. Revisar en el blog y publicar: `python tools/publish.py publish <id>`.
