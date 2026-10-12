@@ -1,0 +1,10 @@
+# credenciales y tokens de Blogger (NUNCA subir)
+tools/client_secret*.json
+tools/.blogger_token.json
+tools/.blog_config.json
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/

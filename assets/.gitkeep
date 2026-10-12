@@ -1,0 +1,3 @@
+# Adjuntos de las notas (imágenes, PDFs, archivos)
+# Se enlazan desde los posts como assets/archivo.ext y el script
+# publish.py los convierte a URLs de GitHub raw.
