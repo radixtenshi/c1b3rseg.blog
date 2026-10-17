@@ -1,0 +1,31 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; DESACTIVA EL OVERLAY DE VIDEOJUEGOS DE WINDOWS (Xbox Game Bar / Gaming Overlay)
+; Evita que Windows intente abrir el overlay al detectar un juego o programa,
+; lo que genera un error y una ventana colgada si el paquete Xbox Game Bar
+; (Microsoft.XboxGamingOverlay) no está instalado.
+; Solo HKCU: no requiere administrador.
+; =============================================================================
+
+; No abrir el overlay (Nexus) al detectar un juego
+[HKEY_CURRENT_USER\Software\Microsoft\GameBar]
+"UseNexusForGameBarEnabled"=dword:00000000
+
+; No mostrar el panel de inicio de Game Bar
+"ShowStartupPanel"=dword:00000000
+
+; No activar Game Bar en juegos "clásicos" (ventana de escritorio)
+"AllowGameBarForClassicGames"=dword:00000000
+
+; Desactiva captura/grabación de juegos (GameDVR)
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\GameDVR]
+"AppCaptureEnabled"=dword:00000000
+"HistoricalCaptureEnabled"=dword:00000000
+
+; -----------------------------------------------------------------------------
+; Cierre definitivo a nivel policy (requiere importar como ADMINISTRADOR).
+; Si no tenés admin, borrá los ";" de las líneas de abajo antes de importar.
+; -----------------------------------------------------------------------------
+;[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\GameDVR]
+;"AllowGameDVR"=dword:00000000

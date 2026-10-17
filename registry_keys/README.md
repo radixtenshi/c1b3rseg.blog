@@ -47,6 +47,11 @@ Este documento describe y explica cada archivo `.reg` que conforma una colecció
 ### Tracking Domains (`Block_Tracking_Domains.reg` / `Unblock_Tracking_Domains.reg`)
 - Bloquea o desbloquea resolución de dominios de telemetría por IPv6.
 
+### Gaming Overlay (`Disable_Gaming_Overlay.reg` / `Enable_Gaming_Overlay.reg`)
+- Desactiva el overlay de juegos de Windows (Xbox Game Bar / GameDVR) a nivel HKCU: no intenta abrir el overlay al detectar un juego ni graba clips, evitando el error y la ventana colgada cuando el paquete `Microsoft.XboxGamingOverlay` no está instalado.
+- Incluye (comentadas) las líneas de policy HKLM para cerrarlo a nivel admin.
+- Reverso restaura los valores por defecto.
+
 ---
 ## RENDIMIENTO Y OPTIMIZACIÓN
 

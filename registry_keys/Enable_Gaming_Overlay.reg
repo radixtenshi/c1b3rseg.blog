@@ -1,0 +1,22 @@
+Windows Registry Editor Version 5.00
+
+; =============================================================================
+; REACTIVA EL OVERLAY DE VIDEOJUEGOS DE WINDOWS (Xbox Game Bar / Gaming Overlay)
+; Reverso de Disable_Gaming_Overlay.reg — restaura los valores por defecto.
+; Solo HKCU: no requiere administrador.
+; =============================================================================
+
+[HKEY_CURRENT_USER\Software\Microsoft\GameBar]
+"UseNexusForGameBarEnabled"=dword:00000001
+"ShowStartupPanel"=dword:00000001
+"AllowGameBarForClassicGames"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\GameDVR]
+"AppCaptureEnabled"=dword:00000001
+"HistoricalCaptureEnabled"=dword:00000001
+
+; -----------------------------------------------------------------------------
+; Si importaste la policy como admin, también hay que restaurarla:
+; -----------------------------------------------------------------------------
+;[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\GameDVR]
+;"AllowGameDVR"=dword:00000001
